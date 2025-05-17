@@ -1,19 +1,12 @@
-# Render Proxy Server
+middleware for smtp:
 
-This is a simple proxy server to bypass mixed content restrictions when calling insecure HTTP APIs from an HTTPS frontend.
+sample curl:
 
-## Endpoint
-
-`POST /proxy`
-
-### Body (JSON):
-
-```json
-{
-  "name": "Alvis Abreo",
-  "email": "alvis@example.com",
-  "mobile": "9057574458",
-  "sourceName": "EDXSPRT107",
-  "campignName": "partnerotp"
-}
-```
+curl --location 'http://localhost:3000/send-admission-mail' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"to": "alvisabreo.00@gmail.com",
+"name": "John Doe",
+"userId": "test1111544@gmail.com",
+"password": "5TPGHWCA"
+}'
